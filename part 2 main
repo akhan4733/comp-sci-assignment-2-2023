@@ -1,0 +1,156 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include "Employee.h"
+#include "nonProfessional.h"
+#include "Professional.h"
+
+
+
+using namespace std;
+
+void monthlysal (int monthlysal); //void integer
+
+void monthlyvacation(int monthlyvacation); //void integer
+
+void nonPro (int nonPro); //void integer
+
+int main () //main function
+{
+  
+bool game = true;
+
+  //integers I used 
+  int a = 4;
+  int sal1;
+  int sal2;
+  int vac1;
+  int vac2;
+  int health1;
+  int health2;
+  int hours;
+  int x =12;
+  int hours2;
+  int professional;
+  int nonprofessional;
+  
+  //integers used 
+  int pro, nonPro, weeklysal,weeklysal2, healthcaredays,healthcaredays2,vacation,vacation2, monthlysal, monthlyvacation, monthlyvacation2;
+
+//make user choose between two choices 
+cout <<"Please choose between ((1) being professional or (2) being nonprofessional)" << endl;
+int choice;
+cin >>choice;
+  //choice one using "Employee.h"
+if (choice ==1)
+{
+  //weekly salary
+    cout << "Enter the paygrade of professional employee (whole numbers only) :" << endl;
+
+  cin >> weeklysal;
+
+  cout << "Enter the number of hours worked by professional employee:" << endl;
+  cin >> hours;
+
+  cout << "The weekly salary for said employee is:" << 
+    weeklysal *hours << endl;
+  
+
+
+  //vacation function
+cout << "Enter the hours worked in month for vacation of Professional Employee in days:" << endl;
+
+  cin >> monthlyvacation;
+
+  cout << "Vacation time for Professional employee is:" << 
+  
+  2*monthlyvacation/12 << endl; //equation I have made up to use for this function
+
+  //health care days function
+  cout << "Enter number of hours for health care days in a week:" << endl;
+cin >>healthcaredays;
+  cout << "The time you can use for health care days within a year is: " << healthcaredays*0.05 <<endl; //healthcare equation I have used for this function
+
+  
+  
+//break and shows all of the inputs using the header files
+ cout << " *** Professional Employee***"
+<< endl;
+
+  
+//first output function
+  
+  cout << "Weekly salary of Professional Employee:" <<
+
+ weeklysal *hours << endl;
+
+  //second output function 
+
+  cout << "Weekly Vacation of Professional Employee:" <<2*monthlyvacation/12 <<endl;
+
+//third function
+  cout << "Weekly heathcare Contributions of Professional Employee: " << healthcaredays*0.05 <<endl;
+
+
+}
+else if (choice ==2)
+{
+    //nonpro functions
+
+
+
+  cout << "***Non Professional Employee***" << endl;
+
+  //weekly pay fuction
+cout << "Enter the paygrade of non professional employee (whole numbers only) :" << endl;
+
+  cin >> weeklysal2;
+
+  cout << "Enter the number of hours worked by non professional employee:" << endl;
+  cin >> hours2;
+
+  cout << "The weekly salary for nonprofessional employee is: $" << 
+    weeklysal2 *hours2 << endl; //equation used to calculate this
+  
+
+  //second sunction used for vacation time
+cout << "Enter the hours worked in month for vacation of non Professional Employee in days:" << endl;
+
+  cin >> monthlyvacation2;
+
+  cout << "Vacation time for non Professional employee is:" << 
+  
+  2*monthlyvacation2/12 << endl; //same equation as professional vacation
+
+  //healthcaredays function
+
+   cout << "Enter number of hours for health care days in a week:" << endl;
+cin >>healthcaredays2;
+  cout << "The time you can use for health care days within a year is: " << healthcaredays2*0.03 <<endl; //a different equation used rather than the Porfessional one
+
+
+  //all of the non professional employees fucntions being outputed as a summary
+
+  cout << " *** Non Professional Employee***"
+<< endl;
+
+  
+  cout << "Weekly salary of Non Professional Employee:" <<
+
+ weeklysal2 *hours2 << endl;
+
+  //second output function 
+
+  cout << "Weekly Vacation of Non Professional Employee:" <<2*monthlyvacation2/12 <<endl;
+
+//third function
+  cout << "Weekly heathcare Contributions of  Non Professional Employee: " << healthcaredays2*0.03 <<endl;
+
+
+  
+}
+
+  
+  return 0; // 
+  
+}
